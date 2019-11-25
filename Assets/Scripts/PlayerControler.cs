@@ -10,10 +10,12 @@ public class PlayerControler : MonoBehaviour {
     public GameObject closestTower;
     public GameObject hookedTower;
     private bool isPulled = false;
+    private UIControllerScript uIController;
     // Start is called before the first frame update
     void Start () {
         //move the object
         rb2d = this.gameObject.GetComponent<Rigidbody2D> ();
+        uIController = GameObject.Find("Canvas").GetComponent<UIControllerScript>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class PlayerControler : MonoBehaviour {
 
     public void OnTriggerEnter2D (Collider2D collider) {
         if (collider.gameObject.tag == "Goal") {
-            Debug.Log ("Finish line!");
+            uIController.endGame();
         }
     }
 

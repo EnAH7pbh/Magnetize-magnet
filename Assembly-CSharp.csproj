@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerControler.cs" />
+     <Compile Include="Assets\Scripts\UIControllerScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Coding/Unity/Magnetize magnet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
