@@ -11,18 +11,23 @@ public class PlayerControler : MonoBehaviour {
     public GameObject hookedTower;
     private bool isPulled = false;
     private UIControllerScript uIController;
+    private AudioSource myAudio;
+    private bool isCrashed = false;
+    private Vector3 startPosition;
     // Start is called before the first frame update
     void Start () {
         //move the object
+        startPosition = this.transform.position;
         rb2d = this.gameObject.GetComponent<Rigidbody2D> ();
-        uIController = GameObject.Find("Canvas").GetComponent<UIControllerScript>();
+        uIController = GameObject.Find ("Canvas").GetComponent<UIControllerScript> ();
+        myAudio = this.gameObject.GetComponent<AudioSource> ();
     }
 
     // Update is called once per frame
     void Update () {
         rb2d.velocity = -transform.up * moveSpeed;
 
-        if (Input.GetKey (KeyCode.Z) && !isPulled) {
+        if (Input.GetKey (KeyCode.Z) && !isPulled || Input.GetMouseButtonDown (0)) {
             if (closestTower != null && hookedTower == null) {
                 hookedTower = closestTower;
             }
@@ -40,21 +45,34 @@ public class PlayerControler : MonoBehaviour {
                 isPulled = true;
             }
         }
-        if (Input.GetKeyUp (KeyCode.Z)) {
+        if (Input.GetKeyUp (KeyCode.Z) || Input.GetMouseButtonUp (0)) {
             rb2d.angularVelocity = 0;
             isPulled = false;
+        }
+        if (isCrashed) {
+            if (!myAudio.isPlaying) {
+                //restart scene
+                restartPosition ();
+            }
         }
     }
 
     public void OnCollisionEnter2D (Collision2D collision) {
         if (collision.gameObject.tag == "Wall") {
-            this.gameObject.SetActive (false);
+            if (!isCrashed) {
+                //play sfx
+                myAudio.Play ();
+                rb2d.velocity = new Vector3 (0f, 0f, 0f);
+                rb2d.angularVelocity = 0f;
+                isCrashed = true;
+            }
         }
     }
 
     public void OnTriggerEnter2D (Collider2D collider) {
         if (collider.gameObject.tag == "Goal") {
-            uIController.endGame();
+            uIController.endGame ();
+            this.gameObject.SetActive (false);
         }
     }
 
@@ -74,6 +92,22 @@ public class PlayerControler : MonoBehaviour {
             closestTower = null;
 
             collider.gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
+        }
+    }
+
+    public void restartPosition () {
+        //set to restart position
+        this.transform.position = startPosition;
+
+        //restart rotation
+        this.transform.rotation = Quaternion.Euler (0f, 0f, 90f);
+
+        //set isCrashed false
+        isCrashed = false;
+
+        if (closestTower) {
+            closestTower.GetComponent<SpriteRenderer> ().color = Color.white;
+            closestTower = null;
         }
     }
 }
