@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIControllerScript : MonoBehaviour {
-    public GameObject pausePanel;
+    public GameObject Panel;
     public GameObject resumeBtn;
     public Text levelClearTxt;
     private Scene currActiveScene;
@@ -22,15 +22,21 @@ public class UIControllerScript : MonoBehaviour {
 
     public void pauseGame () {
         Time.timeScale = 0;
-        pausePanel.SetActive (true);
+        Panel.SetActive (true);
     }
 
+    public void playerDead () {
+        Time.timeScale = 0;
+        Panel.SetActive (true);
+        Panel.transform.GetChild (0).gameObject.GetComponent<Text> ().text = "You are dead";
+        Panel.transform.GetChild (1).gameObject.SetActive (false);
+    }
     public void resumeGame () {
         Time.timeScale = 1;
-        pausePanel.SetActive (false);
+        Panel.SetActive (false);
     }
 
-    public void restartGame () {
+    public void restartLevel () {
         Time.timeScale = 1;
         SceneManager.LoadScene (currActiveScene.name);
         Data.score = 0;
@@ -45,8 +51,12 @@ public class UIControllerScript : MonoBehaviour {
     }
 
     public void endGame () {
-        pausePanel.SetActive (true);
+        Panel.SetActive (true);
         resumeBtn.SetActive (false);
         levelClearTxt.text = "You win";
+    }
+    public void home () {
+        Time.timeScale = 1;
+        SceneManager.LoadScene ("Menu");
     }
 }

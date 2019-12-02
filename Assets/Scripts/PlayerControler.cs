@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 public class PlayerControler : MonoBehaviour {
     private Rigidbody2D rb2d;
     private float moveSpeed = 5f;
@@ -13,6 +14,9 @@ public class PlayerControler : MonoBehaviour {
     private Vector3 startPosition;
     private Quaternion startRotation;
     private float dir;
+    public float maxHealth = 100;
+    public float currentHealth = 100;
+    public Image hp;
     // Start is called before the first frame update
     void Start () {
         //move the object
@@ -26,7 +30,10 @@ public class PlayerControler : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         rb2d.velocity = -this.transform.up * moveSpeed;
-
+        hp.fillAmount = currentHealth / maxHealth;
+        if (currentHealth == 0) {
+            uIController.playerDead ();
+        }
         if (Input.GetKey (KeyCode.Z) && !isPulled || Input.GetMouseButtonDown (0)) {
             if (closestTower != null && hookedTower == null) {
                 hookedTower = closestTower;
@@ -68,6 +75,7 @@ public class PlayerControler : MonoBehaviour {
                 rb2d.velocity = new Vector3 (0f, 0f, 0f);
                 rb2d.angularVelocity = 0f;
                 isCrashed = true;
+                currentHealth -= 20;
             }
         }
     }
@@ -121,5 +129,6 @@ public class PlayerControler : MonoBehaviour {
 
     void OnBecameInvisible () {
         restartPosition ();
+        currentHealth -= 20;
     }
 }
