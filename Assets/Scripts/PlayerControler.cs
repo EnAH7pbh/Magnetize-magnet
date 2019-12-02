@@ -1,23 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class PlayerControler : MonoBehaviour {
     private Rigidbody2D rb2d;
-    public float moveSpeed = 5f;
-    public float pullForce = 100f;
-    public float rotateSpeed = 360f;
-    public GameObject closestTower;
-    public GameObject hookedTower;
+    private float moveSpeed = 5f;
+    private float pullForce = 100f;
+    private float rotateSpeed = 360f;
+    private GameObject closestTower;
+    private GameObject hookedTower;
     private bool isPulled = false;
     private UIControllerScript uIController;
     private AudioSource myAudio;
     private bool isCrashed = false;
     private Vector3 startPosition;
+    private Quaternion startRotation;
+    private float dir;
     // Start is called before the first frame update
     void Start () {
         //move the object
-        startPosition = this.transform.position;
+        startPosition = transform.position;
+        startRotation = transform.rotation;
         rb2d = this.gameObject.GetComponent<Rigidbody2D> ();
         uIController = GameObject.Find ("Canvas").GetComponent<UIControllerScript> ();
         myAudio = this.gameObject.GetComponent<AudioSource> ();
@@ -25,22 +25,22 @@ public class PlayerControler : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        rb2d.velocity = -transform.up * moveSpeed;
+        rb2d.velocity = -this.transform.up * moveSpeed;
 
         if (Input.GetKey (KeyCode.Z) && !isPulled || Input.GetMouseButtonDown (0)) {
             if (closestTower != null && hookedTower == null) {
                 hookedTower = closestTower;
             }
             if (hookedTower) {
-                float distance = Vector2.Distance (transform.position, hookedTower.transform.position);
+                float distance = Vector2.Distance (this.transform.position, hookedTower.transform.position);
 
                 //Gravitation towards object
                 Vector3 pullDirection = (hookedTower.transform.position - transform.position).normalized;
-                float newPullForce = Mathf.Clamp (pullForce / distance, 20, 50);
+                float newPullForce = pullForce / distance;
                 rb2d.AddForce (pullDirection * newPullForce);
 
                 //Angular velocity
-                rb2d.angularVelocity = -rotateSpeed / distance;
+                rb2d.angularVelocity = dir * rotateSpeed / distance;
 
                 isPulled = true;
             }
@@ -54,6 +54,9 @@ public class PlayerControler : MonoBehaviour {
                 //restart scene
                 restartPosition ();
             }
+        }
+        if (Data.score >= 200) {
+            uIController.nextLvl ();
         }
     }
 
@@ -70,17 +73,21 @@ public class PlayerControler : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D (Collider2D collider) {
-        if (collider.gameObject.tag == "Goal") {
+        if (collider.gameObject.tag.Equals ("Finish")) {
             uIController.endGame ();
             this.gameObject.SetActive (false);
+        }
+        if (collider.gameObject.tag.Equals ("Coin")) {
+            Data.score += 15;
+            Destroy (collider.gameObject);
         }
     }
 
     public void OnTriggerStay2D (Collider2D collider) {
-        if (collider.gameObject.tag == "Tower") {
+        if (collider.gameObject.tag.Equals ("Tower")) {
             closestTower = collider.gameObject;
-
-            collider.gameObject.GetComponent<SpriteRenderer> ().color = Color.green;
+            GameObject child = collider.transform.GetChild (0).gameObject;
+            dir = child.GetComponent<Rotator> ().direction;
         }
     }
 
@@ -88,10 +95,9 @@ public class PlayerControler : MonoBehaviour {
         if (isPulled) {
             return;
         }
-        if (collider.gameObject.tag == "Tower") {
+        if (collider.gameObject.tag.Equals ("Tower")) {
             closestTower = null;
-
-            collider.gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
+            hookedTower = null;
         }
     }
 
@@ -100,14 +106,20 @@ public class PlayerControler : MonoBehaviour {
         this.transform.position = startPosition;
 
         //restart rotation
-        this.transform.rotation = Quaternion.Euler (0f, 0f, 90f);
+        this.transform.rotation = startRotation;
 
         //set isCrashed false
         isCrashed = false;
 
         if (closestTower) {
-            closestTower.GetComponent<SpriteRenderer> ().color = Color.white;
             closestTower = null;
+            hookedTower = null;
+            isPulled = false;
+            Input.ResetInputAxes ();
         }
+    }
+
+    void OnBecameInvisible () {
+        restartPosition ();
     }
 }

@@ -53,7 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Data.cs" />
      <Compile Include="Assets\Scripts\PlayerControler.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\showScore.cs" />
      <Compile Include="Assets\Scripts\UIControllerScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Coding/Unity/Magnetize magnet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

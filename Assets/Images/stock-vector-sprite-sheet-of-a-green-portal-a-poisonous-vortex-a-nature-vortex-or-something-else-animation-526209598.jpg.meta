@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: 381f8df539bc2374dbce3b029677058f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_0
+    21300002: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_1
+    21300004: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_7
+    21300006: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_8
+    21300008: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_9
+    21300010: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_10
+    21300012: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_11
+    21300014: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_12
+    21300016: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_13
+    21300018: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_14
+    21300020: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_15
+    21300022: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_16
+    21300024: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_17
+    21300026: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_18
+    21300028: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_19
+    21300030: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_20
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_0
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 582
+        width: 151
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799a619ae4180184ea5777899092c8a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_1
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 410
+        width: 151
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfe3886e9f55ce4a811533d5a0db6ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_7
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 591
+        width: 175
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22fb205179ffa7448064bbd8379f8e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 592
+        width: 156
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dced14ea3925cd468f892c2f3c96afc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_9
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 595
+        width: 165
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4d5a956c310474d97287fab5ccef01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_10
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 593
+        width: 158
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46d0eaf6eac73b4792c44f8e468ab6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_11
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 590
+        width: 155
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b9977c200897e46820f89722b197b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_12
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 592
+        width: 156
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f38958ebb5b7e4aae7a486a47632c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_13
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 586
+        width: 157
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3733c7bdaf53b3d4aac992cdb7277dea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 396
+        width: 171
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36caae3c44c8fa45a3e0ffc5ae880bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_15
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 393
+        width: 162
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2ffeffdc02d9e4d80dae98a9d6c85b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_16
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 401
+        width: 155
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fd31aeba183c543bf53c742ea17c74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_17
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 403
+        width: 153
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5aba8412319cc45a4ab5aeafb3fe50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_18
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 403
+        width: 153
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ad9af857c72194c8ede83ee272f1fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_19
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 402
+        width: 152
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c76cf484cd9784e8812e654f9d13e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-sprite-sheet-of-a-green-portal-a-poisonous-vortex-a-nature-vortex-or-something-else-animation-526209598_20
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 401
+        width: 157
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0952b430e53280c49a5c5c263412b4d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d8a7f0e6ac9feb44d96e22bfc8822354
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
