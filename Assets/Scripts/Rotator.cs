@@ -6,12 +6,4 @@ public class Rotator : MonoBehaviour {
     void FixedUpdate () {
         this.transform.eulerAngles += new Vector3 (0, 0, direction);
     }
-
-    public float back () {
-        return -1;
-    }
-
-    public float forward () {
-        return 1;
-    }
 }

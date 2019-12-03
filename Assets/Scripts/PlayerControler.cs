@@ -10,6 +10,7 @@ public class PlayerControler : MonoBehaviour {
     private bool isPulled = false;
     private UIControllerScript uIController;
     private AudioSource myAudio;
+    public AudioClip crash, coin;
     private bool isCrashed = false;
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -33,6 +34,7 @@ public class PlayerControler : MonoBehaviour {
         hp.fillAmount = currentHealth / maxHealth;
         if (currentHealth == 0) {
             uIController.playerDead ();
+            currentHealth = 100;
         }
         if (Input.GetKey (KeyCode.Z) && !isPulled || Input.GetMouseButtonDown (0)) {
             if (closestTower != null && hookedTower == null) {
@@ -71,7 +73,7 @@ public class PlayerControler : MonoBehaviour {
         if (collision.gameObject.tag == "Wall") {
             if (!isCrashed) {
                 //play sfx
-                myAudio.Play ();
+                myAudio.PlayOneShot (crash);
                 rb2d.velocity = new Vector3 (0f, 0f, 0f);
                 rb2d.angularVelocity = 0f;
                 isCrashed = true;
@@ -88,13 +90,14 @@ public class PlayerControler : MonoBehaviour {
         if (collider.gameObject.tag.Equals ("Coin")) {
             Data.score += 15;
             Destroy (collider.gameObject);
+            myAudio.PlayOneShot (coin);
         }
     }
 
     public void OnTriggerStay2D (Collider2D collider) {
         if (collider.gameObject.tag.Equals ("Tower")) {
-            closestTower = collider.gameObject;
             GameObject child = collider.transform.GetChild (0).gameObject;
+            closestTower = collider.gameObject;
             dir = child.GetComponent<Rotator> ().direction;
         }
     }
@@ -130,5 +133,6 @@ public class PlayerControler : MonoBehaviour {
     void OnBecameInvisible () {
         restartPosition ();
         currentHealth -= 20;
+        myAudio.PlayOneShot(crash);
     }
 }
